@@ -1,0 +1,135 @@
+@use 'mixins';
+
+$title: 4.5em;
+$subtitle: 3.5em;
+$paragraph: 1.125em;
+$primary-color: #E91E63;
+$light-color: #F7F6F1;
+$dark-color: #0a0a0a;
+
+.light-mode {
+    background-color: $light-color;
+    color: $dark-color !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $dark-color;
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: $light-color;
+    overflow-x: hidden;
+
+    h1 {
+        font-size: $title;
+    }
+
+    h2 {
+        font-size: $subtitle;
+    }
+
+    p {
+        font-size: $paragraph;
+    }
+
+    a {
+        text-decoration: none;
+        transition: .4s;
+        color: #ffff;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+
+    li {
+        list-style: none;
+    }
+
+    button {
+        padding: 1.2em;
+        border-radius: 2em;
+        border: 1px solid $primary-color;
+        background-color: $primary-color;
+        color: $light-color;
+        font-family: 'Sora';
+        font-weight: 800;
+    }
+}
+
+.pink {
+    color: $primary-color;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    @include mixins.container;
+
+    &-navbar {
+        
+        ul {
+            @include mixins.flex-center;
+            gap: 2em;
+        }
+
+        .active {
+            color: $primary-color;
+        }
+    }
+}   
+
+.hero {
+    @include mixins.container;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding-top: 4em;
+
+    &-circle {
+        position: absolute;
+        width: 1000px;
+        height: 1000px;
+        top: -75px;
+        right: -300px;
+        z-index: -1;
+        background: radial-gradient(closest-side, rgba(233,30,99,0.21) 0%, #0a0a0a);
+        backdrop-filter: blur(10px);
+    }
+
+    &-tag {
+        border: 1px solid $primary-color;
+        border-radius: 2em;
+        padding: .6em;
+        width: 15%;
+        @include mixins.flex-center;
+        font-size: small;
+    }
+
+    &-content {
+        max-width: 800px;
+    }
+
+    &-social {
+        position: absolute;
+        right: 0;
+        bottom: 5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 10em;
+    }
+}
+
+  
+
