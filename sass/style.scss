@@ -1,7 +1,7 @@
 @use 'mixins';
 
-$title: 4.5em;
-$subtitle: 3.5em;
+$title: 8vw;
+$subtitle: 4vw;
 $paragraph: 1.125em;
 $primary-color: #E91E63;
 $light-color: #F7F6F1;
@@ -55,11 +55,18 @@ body {
     button {
         padding: 1.2em;
         border-radius: 2em;
-        border: 1px solid $primary-color;
-        background-color: $primary-color;
+        border: 1px solid $light-color;
+        background-color: transparent;
         color: $light-color;
         font-family: 'Sora';
         font-weight: 800;
+        transition: .4s;
+
+        &:hover {
+            background-color: $primary-color;
+            border: 1px solid $primary-color;
+            cursor: pointer;
+        }
     }
 }
 
@@ -71,7 +78,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    position: sticky;
     @include mixins.container;
 
     &-navbar {
@@ -87,13 +94,24 @@ body {
     }
 }   
 
+.noise {
+    width: 100vw;
+    height: 100vh;
+    background: url(../imgs/noise.jpg) center;
+    object-fit: cover;
+    opacity: 0.1; 
+    position: fixed;
+    pointer-events: none;
+}
+
 .hero {
     @include mixins.container;
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 2em;
-    padding-top: 4em;
+    height: 90vh;
 
     &-circle {
         position: absolute;
@@ -116,20 +134,114 @@ body {
     }
 
     &-content {
-        max-width: 800px;
+        text-align: center;
+
+        p {
+            font-size: 2em;
+        }
+
+        span {
+            font-size: 2em;
+        }
     }
 
-    &-social {
-        position: absolute;
-        right: 0;
-        bottom: 5em;
+    &-line {
+        width: 100%;
+        height: 1px;
+        background-color: $light-color;
+    }
+
+    &-about {
+        display: grid;
+        grid-template-columns: 1fr 1fr .5fr;
+        gap: 2em;
+
+        p {
+            opacity: .7;
+
+            & a {
+                text-decoration: underline;
+            }
+        }
+    }
+ 
+}
+
+.social {
+
+    padding-top: 4em;
+
+    &-links {
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-between;
+    }
+
+    &-link {
+        padding: 1em;
+        border: 1px solid $light-color;
+        border-radius: 10em;
+        display: flex;
         align-items: center;
-        height: 10em;
+        gap: .5em;
+
+        &:hover {
+            border: 1px solid $primary-color;
+        }
     }
 }
 
-  
+.projects {
+    @include mixins.container;
+    margin-top: 4em;
+
+    &-area {
+        padding-top: 2em;
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 2em;
+        align-items: center;
+        padding-bottom: 4em;
+    }
+
+    &-area:nth-child(2n) {
+        flex-direction: row;
+    }
+
+    &-img {
+        width: 70%;
+
+        img {
+            width: 100%;
+            border-radius: 2em;
+        }
+    }
+
+    &-info {
+        display: flex;
+        flex-direction: column;
+        gap: 4em;
+
+        a {
+            font-size: 2em;
+            display: flex;
+            align-items: center;
+            gap: .5em;
+
+            img {
+                width: 32px;
+            }
+        }
+    }
+
+    &-stacks {
+        display: flex;
+        gap: 2em;
+
+        p {
+            padding: .5em;
+            border: 1px solid $light-color;
+            border-radius: 2em;
+        }
+    }
+}
 
