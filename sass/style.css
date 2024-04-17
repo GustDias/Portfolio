@@ -52,6 +52,9 @@ body button:hover {
   border: 1px solid #E91E63;
   cursor: pointer;
 }
+body .icon:hover {
+  fill: #E91E63;
+}
 
 .pink {
   color: #E91E63;
