@@ -18,10 +18,10 @@ body {
   overflow-x: hidden;
 }
 body h1 {
-  font-size: 8vw;
+  font-size: 8em;
 }
 body h2 {
-  font-size: 4vw;
+  font-size: 4em;
 }
 body p {
   font-size: 1.125em;
@@ -52,12 +52,24 @@ body button:hover {
   border: 1px solid #E91E63;
   cursor: pointer;
 }
-body .icon:hover {
-  fill: #E91E63;
-}
 
 .pink {
   color: #E91E63;
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+  gap: 8px;
+}
+.btn-icon img {
+  display: none;
+  opacity: 0;
+}
+.btn-icon:hover img {
+  opacity: 1;
+  display: block;
 }
 
 .header {
@@ -65,9 +77,10 @@ body .icon:hover {
   justify-content: space-between;
   align-items: center;
   position: sticky;
-  max-width: 1440px;
+  max-width: 1400px;
   padding: 2em;
   margin: 0 auto;
+  border-bottom: 1px solid;
 }
 .header-navbar ul {
   display: flex;
@@ -91,7 +104,7 @@ body .icon:hover {
 }
 
 .hero {
-  max-width: 1440px;
+  max-width: 1400px;
   padding: 2em;
   margin: 0 auto;
   position: relative;
@@ -99,13 +112,13 @@ body .icon:hover {
   flex-direction: column;
   justify-content: center;
   gap: 2em;
-  height: 90vh;
+  height: 100vh;
 }
 .hero-circle {
   position: absolute;
   width: 1000px;
   height: 1000px;
-  top: -75px;
+  top: -280px;
   right: -300px;
   z-index: -1;
   background: radial-gradient(closest-side, rgba(233, 30, 99, 0.21) 0%, #0a0a0a);
@@ -133,13 +146,14 @@ body .icon:hover {
 }
 .hero-line {
   width: 100%;
-  height: 1px;
+  min-height: 1px;
   background-color: #F7F6F1;
 }
 .hero-about {
   display: grid;
   grid-template-columns: 1fr 1fr 0.5fr;
-  gap: 2em;
+  gap: 5em;
+  text-align: justify;
 }
 .hero-about p {
   opacity: 0.7;
@@ -168,10 +182,11 @@ body .icon:hover {
 }
 
 .projects {
-  max-width: 1440px;
+  max-width: 1400px;
   padding: 2em;
   margin: 0 auto;
-  margin-top: 4em;
+  margin-top: 8em;
+  position: relative;
 }
 .projects-area {
   padding-top: 2em;
@@ -180,6 +195,7 @@ body .icon:hover {
   gap: 2em;
   align-items: center;
   padding-bottom: 4em;
+  flex-wrap: wrap;
 }
 .projects-area:nth-child(2n) {
   flex-direction: row;
@@ -194,18 +210,30 @@ body .icon:hover {
 .projects-info {
   display: flex;
   flex-direction: column;
-  gap: 4em;
+  gap: 2em;
 }
-.projects-info a {
+.projects-link {
   font-size: 2em;
   display: flex;
   align-items: center;
   gap: 0.5em;
+  transition: all 0.4s;
 }
-.projects-info a img {
+.projects-link:hover {
+  text-decoration: underline;
+}
+.projects-link img {
+  visibility: hidden;
   width: 32px;
+  opacity: 0;
+  transition: all 0.2s;
+}
+.projects-link:hover img {
+  visibility: visible;
+  opacity: 1;
 }
 .projects-stacks {
+  margin-top: 2em;
   display: flex;
   gap: 2em;
 }
@@ -213,4 +241,112 @@ body .icon:hover {
   padding: 0.5em;
   border: 1px solid #F7F6F1;
   border-radius: 2em;
+}
+.projects-circle {
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  top: 200px;
+  right: 600px;
+  z-index: -1;
+  background: radial-gradient(closest-side, rgba(233, 30, 99, 0.21) 0%, #0a0a0a);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.stacks {
+  max-width: 1400px;
+  padding: 2em;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 6em;
+}
+.stacks-flex {
+  display: flex;
+  margin-top: 2em;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6em;
+  padding: 2em;
+}
+.stacks-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+  width: 28%;
+  gap: 1em;
+}
+.stacks-img {
+  width: 72px;
+  transition: all 0.4s;
+}
+.stacks-img:hover {
+  filter: grayscale(100%);
+}
+
+.soft {
+  max-width: 1400px;
+  padding: 2em;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 6em;
+}
+.soft-table {
+  width: 100%;
+}
+.soft-table tr {
+  height: 4em;
+}
+.soft-table tr td {
+  border-bottom: 1px solid;
+  font-size: 1.5em;
+  padding: 1.2em;
+  position: relative;
+}
+.soft-table tr td .gif {
+  display: none;
+  opacity: 0;
+}
+.soft-table tr td:hover .gif {
+  display: block;
+  opacity: 1;
+  position: absolute;
+  z-index: 1;
+  top: -100px;
+  left: 35%;
+}
+.soft-table .icon {
+  padding-left: 1em;
+}
+
+.contato {
+  max-width: 1400px;
+  padding: 2em;
+  margin: 0 auto;
+  text-align: center;
+  margin: 4em 0;
+}
+.contato h2 {
+  font-size: 6em;
+}
+.contato p {
+  font-size: 1.5em;
+}
+.contato button {
+  margin-top: 2em;
+  font-size: 1.5em;
+}
+
+footer {
+  max-width: 1400px;
+  padding: 2em;
+  margin: 0 auto;
+  border-top: 1px solid;
+}
+footer .footer-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }/*# sourceMappingURL=style.css.map */

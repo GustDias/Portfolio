@@ -17,11 +17,12 @@
         <nav class="header-navbar">
             <ul>
                 <li><a class="active" href="#">Início</a></li>
-                <li><a href="#">Projetos</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#hard-skills">Skills</a></li>
+                <li><a href="#hard-skills">Contato</a></li>
             </ul>
         </nav>
-        <button>Me contrate</button>
+        <!-- <button>Me contrate</button> -->
     </header>
 
     <main>
@@ -39,30 +40,38 @@
             <div class="hero-about">
                 <p> Atualmente faço freelance em desenvolvimento de sites com low-code, porém, estou em busca do meu primeiro emprego como Dev. front-end para me aperfeiçoar. </p>
                 <p>Gosto muito de tecnlogia e estética, por isso, também pretendo me especializar em UX e UI design.</p>
-                <p>Diga Oi:
-                    <a href="">(11) 99672-0722</a>
+                <p>Diga Oi: <br>
+                    <a href="https://whatsa.me/5511996720722" target="_blank">(11) 99672-0722</a>
                 </p>
 
             </div>
 
             <div class="social">
                 <div class="social-links">
-                    <a class="social-link" href="#">CURRÍCULO <img class="icon" src="/imgs/download.svg" alt=""> </a>
-                    <a class="social-link"href="#">LINKEDIN <img class="social-svg" src="imgs/arrow.svg" alt=""></a>
-                    <a class="social-link"href="#">GITHUB <img class="social-svg" src="imgs/arrow.svg" alt=""></a>
+                    <a href="https://github.com/GustDias" target="_blank">
+                        <button class="btn-icon">Currículo <img src="/imgs/arrow.svg" alt=""></button>
+                    </a>
+                    <a href="https://www.linkedin.com/in/gustavo-dias-cardoso/" target="_blank">
+                        <button class="btn-icon">Linkedin <img src="/imgs/arrow.svg" alt=""></button>
+                    </a>
+                    <a href="https://github.com/GustDias" target="_blank">
+                        <button class="btn-icon">Github <img src="/imgs/arrow.svg" alt=""></button>
+                    </a>                    
                 </div>
             </div>
+
         </section>
     </main>
 
-    <section class="projects">
+    <section class="projects" id="projetos">
         <h2>PROJETOS</h2>
         <div class="projects-area">
             <div class="projects-img">
                 <img src="imgs/projeto1.png" alt="">
             </div>
             <div class="projects-info">
-                <a href="#">Site academia <img src="imgs/arrow.svg" alt=""></a>
+                <a class="projects-link" href="https://github.com/GustDias/academia" target="_blank">Pojeto Github<img src="imgs/pink-arrow.svg" alt=""></a>
+                <a class="projects-link" href="https://gustdias.github.io/academia/" target="_blank">Deploy<img src="imgs/pink-arrow.svg" alt=""></a>
                 <div class="projects-stacks">
                     <p>HTML</p>
                     <p>CSS</p>
@@ -76,7 +85,8 @@
                 <img src="imgs/projeto2.png" alt="">
             </div>
             <div class="projects-info">
-                <a href="#">Estudo Js <img src="imgs/arrow.svg" alt=""></a>
+                <a class="projects-link" href="https://github.com/GustDias/starbucks" target="_blank">Projeto Github<img src="imgs/pink-arrow.svg" alt=""></a>
+                <a class="projects-link" href="https://gustdias.github.io/starbucks/" target="_blank">Deploy<img src="imgs/pink-arrow.svg" alt=""></a>
                 <div class="projects-stacks">
                     <p>HTML</p>
                     <p>CSS</p>
@@ -85,7 +95,94 @@
             </div>
         </div>
 
+        <div class="projects-circle"></div>
+
     </section>
+
+    <section class="stacks" id="hard-skills">
+        <h2>HARD SKILLS</h2>
+        <div class="stacks-flex">
+            <div class="stacks-item">
+                <p>HTML 5</p>
+                <img src="/imgs/html.svg" alt="" class="stacks-img">
+            </div>
+            
+            <div class="stacks-item">
+                <p>CSS 3</p>
+                <img src="/imgs/css.svg" alt="" class="stacks-img">
+            </div>
+            
+            <div class="stacks-item">
+                <p>SASS</p>
+                <img src="/imgs/sass.svg" alt="" class="stacks-img">
+            </div>
+            
+            <div class="stacks-item">
+                <p>BOOTSTRAP</p>
+                <img src="/imgs/bootstrap.svg" alt="" class="stacks-img">
+            </div>
+            
+            <div class="stacks-item">
+                <p>JAVASCRIPT</p>
+                <img src="/imgs/js.svg" alt="" class="stacks-img">
+            </div>
+            
+            <div class="stacks-item">
+                <p>GIT</p>
+                <img src="/imgs/git.svg" alt="" class="stacks-img">
+            </div>
+        </div>
+    </section>
+
+    <section class="soft" id="soft-skills">
+        <h2>SOFT SKILLS</h2>
+        <table class="soft-table">
+            <tbody>
+                <tr>
+                  <td>Paciente <span class="icon">😇</span>
+                  <img src="/imgs/gif.gif" alt="" class="gif">
+                  </td>
+                </tr>
+                <tr>
+                  <td>Calmo <span class="icon">😌</span>
+                    <img src="/imgs/gif2.gif" alt="" class="gif">
+                  </td>
+                </tr>
+                <tr>
+                  <td>Trabalho em equipe <span class="icon">🤝</span>
+                    <img src="/imgs/gif3.gif" alt="" class="gif">
+                  </td>
+                </tr>
+                <tr>
+                  <td>Resolução de problemas <span class="icon">🧠</span>
+                    <img src="/imgs/gif4.gif" alt="" class="gif">
+                  </td>
+                </tr>
+                <tr>
+                  <td>Resiliente <span class="icon">💪</span>
+                    <img src="/imgs/gif5.gif" alt="" class="gif">
+                  </td>
+                </tr>
+            </tbody>
+        </table>    
+
+        <div class="hero-circle"></div>
+    </section>
+
+<section class="contato">
+    <h2>ENTRE EM CONTATO</h2>
+    <p>Estou disponível para trabalho fixo!</p>
+    <a href="https://whatsa.me/5511996720722" target="_blank">
+        <button>CONTATAR</button>
+    </a>
+</section>
+
+<footer>
+    <div class="footer-info">
+        <p>Todos os direitos reservados© </p>
+        <p>Feito com ❤️ </p>
+    </div>
+</footer>
 
 </body>
 </html>
