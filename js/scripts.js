@@ -1,12 +1,17 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const checkbox = document.getElementById('checkbox');
-    const body = document.body;
+// Seleciona todos os links pela classe
+var links = document.querySelectorAll(".link");
 
-    checkbox.addEventListener('change', function() {
-      if (this.checked) {
-        body.classList.add('light-mode');
-      } else {
-        body.classList.remove('light-mode');
-      }
+// Adiciona um ouvinte de evento de clique a cada link
+links.forEach(function(link) {
+    link.addEventListener("click", function(event) {
+        event.preventDefault();
+        
+        // Remove a classe "active" de todos os links
+        links.forEach(function(link) {
+            link.classList.remove("active");
+        });
+        
+        // Adiciona a classe "active" apenas ao link clicado
+        this.classList.add("active");
     });
-  });
+});

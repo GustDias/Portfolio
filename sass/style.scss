@@ -45,6 +45,7 @@ body {
 
         &:hover {
             color: $primary-color;
+            text-decoration: underline;
         }
     }
 
@@ -98,6 +99,11 @@ body {
     position: sticky;
     @include mixins.container;
     border-bottom: 1px solid;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #0a0a0a56;
+    backdrop-filter: blur(5px);
 
     &-navbar {
         
@@ -105,12 +111,12 @@ body {
             @include mixins.flex-center;
             gap: 2em;
         }
-
-        .active {
-            color: $primary-color;
-        }
     }
-}   
+} 
+
+.active {
+    color: $primary-color;
+}
 
 // EFEITO NOISE DE FUNDO
 .noise {
@@ -392,5 +398,63 @@ footer {
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 667px) {
+    h1 {
+        font-size: 4em !important;
+    }
+    
+    h2 {
+        font-size: 2.5em !important;
+    }
+
+    .header-logo {
+        display: none;
+    }
+
+    .hero {
+        height: auto;
+
+        &-content p {
+            font-size: 1.2em;
+        }
+
+        &-about {
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+        }
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .projects {
+        margin-top: 2em;
+
+        &-img {
+            width: 100%;
+        }
+    }
+
+    .stacks, .soft {
+        margin-top: 0;
+    }
+
+    .soft-table tr td {
+        padding: 1em;
+        font-size: 1.2em;
+    }
+
+    td:hover .gif {
+        display: none !important;
+    }
+
+    .soft-table .icon {
+        padding-left: 0;
     }
 }
