@@ -99,6 +99,11 @@ body {
     position: sticky;
     @include mixins.container;
     border-bottom: 1px solid;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #0a0a0a56;
+    backdrop-filter: blur(5px);
 
     &-navbar {
         
@@ -106,12 +111,12 @@ body {
             @include mixins.flex-center;
             gap: 2em;
         }
-
-        .active {
-            color: $primary-color;
-        }
     }
-}   
+} 
+
+.active {
+    color: $primary-color;
+}
 
 // EFEITO NOISE DE FUNDO
 .noise {
@@ -443,6 +448,10 @@ footer {
     .soft-table tr td {
         padding: 1em;
         font-size: 1.2em;
+    }
+
+    td:hover .gif {
+        display: none !important;
     }
 
     .soft-table .icon {
