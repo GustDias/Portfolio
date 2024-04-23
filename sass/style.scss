@@ -440,8 +440,8 @@ footer {
             width: 100%;
         }
 
-        &-area:nth-child(2n) {
-            flex-direction: row;
+        &-area {
+            flex-direction: row !important;
         }
     }
 
