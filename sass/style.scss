@@ -439,6 +439,10 @@ footer {
         &-img {
             width: 100%;
         }
+
+        &-area:nth-child(2n) {
+            flex-direction: row;
+        }
     }
 
     .stacks, .soft {

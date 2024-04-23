@@ -391,6 +391,9 @@ footer .footer-info {
   .projects-img {
     width: 100%;
   }
+  .projects-area:nth-child(2n) {
+    flex-direction: row;
+  }
   .stacks, .soft {
     margin-top: 0;
   }
