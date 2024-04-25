@@ -78,9 +78,7 @@ body button:hover {
   justify-content: space-between;
   align-items: center;
   position: sticky;
-  max-width: 1400px;
-  padding: 2em;
-  margin: 0 auto;
+  padding: 2em 8em;
   border-bottom: 1px solid;
   position: sticky;
   top: 0;
@@ -367,6 +365,9 @@ footer .footer-info {
   h2 {
     font-size: 2.5em !important;
   }
+  .header {
+    padding: 2em;
+  }
   .header-logo {
     display: none;
   }
@@ -394,6 +395,13 @@ footer .footer-info {
   .projects-area {
     flex-direction: row !important;
   }
+  .projects-info {
+    gap: 1em;
+  }
+  .projects-stacks {
+    gap: 1em;
+    margin-top: 1em;
+  }
   .stacks, .soft {
     margin-top: 0;
   }
@@ -406,5 +414,9 @@ footer .footer-info {
   }
   .soft-table .icon {
     padding-left: 0;
+  }
+  .footer-info {
+    flex-direction: column;
+    gap: 0.5em;
   }
 }/*# sourceMappingURL=style.css.map */

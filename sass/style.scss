@@ -97,7 +97,7 @@ body {
     justify-content: space-between;
     align-items: center;
     position: sticky;
-    @include mixins.container;
+    padding: 2em 8em;
     border-bottom: 1px solid;
     position: sticky;
     top: 0;
@@ -410,8 +410,12 @@ footer {
         font-size: 2.5em !important;
     }
 
-    .header-logo {
-        display: none;
+    .header {
+        padding: 2em;
+
+        &-logo {
+            display: none;
+        }
     }
 
     .hero {
@@ -443,6 +447,15 @@ footer {
         &-area {
             flex-direction: row !important;
         }
+
+        &-info {
+            gap: 1em;
+        }
+
+        &-stacks {
+            gap: 1em;
+            margin-top: 1em;
+        }
     }
 
     .stacks, .soft {
@@ -460,5 +473,10 @@ footer {
 
     .soft-table .icon {
         padding-left: 0;
+    }
+
+    .footer-info {
+        flex-direction: column;
+        gap: .5em;
     }
 }
