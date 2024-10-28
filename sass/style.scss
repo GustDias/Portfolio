@@ -111,6 +111,10 @@ body {
             @include mixins.flex-center;
             gap: 2em;
         }
+
+        li a:hover {
+            text-decoration: none;
+        }
     }
 } 
 
